@@ -4,5 +4,12 @@
   <a href="#">Sign in</a>
 </goa-app-header>
 
-<label for="formType3">#3</label>
-<goa-input name="formType3" type="text"></goa-input>
+<div class="container">
+
+  <goa-form-item name="commentsFormItem" label="Comments" helptext="(Internal: Not sent to clients)"
+   optional="false" error="Error message" spellcheck="true">
+  <goa-textarea name="comments" rows="8"  spellcheck="true">
+  </goa-textarea>
+</goa-form-item>
+
+</div>
