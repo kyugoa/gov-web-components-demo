@@ -1,2 +1,28 @@
 /* Add application styles & imports to this file! */
 @import '@abgov/styles/styles.esm.css';
+
+@media print {
+
+  .isPrinting > * {
+    display: none;
+  }
+
+  /* .isPrinting lto-fola-print-layout {
+    display: block;
+  } */
+
+  lto-fola-print-layout {
+    display: block !important;
+  }
+
+/* 
+  @page {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  body {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  } */
+}

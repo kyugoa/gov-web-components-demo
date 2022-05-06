@@ -1,4 +1,5 @@
 import { Component, VERSION } from '@angular/core';
+import { PrintService } from './print.service';
 
 @Component({
   selector: 'ngd-root',
@@ -7,4 +8,16 @@ import { Component, VERSION } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular ' + VERSION.major;
+
+  constructor(private printService: PrintService) {
+
+  }
+
+  
+  onPrintInvoice() {
+    const invoiceIds = ['101', '102'];
+    this.printService
+      .printDocument('invoice', invoiceIds);
+  }
+
 }

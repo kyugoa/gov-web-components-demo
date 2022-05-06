@@ -1,15 +1,18 @@
 <goa-service-level-header level="alpha" version="UAT"></goa-service-level-header>
 
-<goa-app-header url="http://google.com" title="Web Components Demo">
-  <a href="#">Sign in</a>
-</goa-app-header>
-
-<div class="container">
+<div class="container" [class.isPrinting]="printService.isPrinting">
 
   <goa-form-item name="commentsFormItem" label="Comments" helptext="(Internal: Not sent to clients)"
    optional="false" error="Error message" spellcheck="true">
   <goa-textarea name="comments" rows="8"  spellcheck="true">
   </goa-textarea>
+
+
+  <button (click)="onPrintInvoice()">PRINT INVOICE</button>
+
+  <router-outlet></router-outlet>
+  <router-outlet name="print"></router-outlet>
+
 </goa-form-item>
 
 </div>
